@@ -55,6 +55,33 @@ If you’re new to integrating modules and just want to use **ProxyModule** in y
      python your_script.py
      ```
 
+
+00. **Customize the Proxy Sources**:
+   - The `scrape_proxies` function retrieves proxies from predefined sources. To add or change these sources:
+     - Open the `proxy_scraper.py` file.
+     - Locate the `proxy_urls` list in the `scrape_proxies` function.
+     - Add or modify the URLs as needed. For example:
+       ```python
+       async def scrape_proxies():
+           proxy_urls = [
+               "https://www.us-proxy.org/",
+               "https://www.sslproxies.org/",
+               "https://new-proxy-source.com/"  # Add your new source here
+           ]
+           tasks = [fetch_proxies_from_site(url) for url in proxy_urls]
+           results = await asyncio.gather(*tasks)
+           
+           # Flatten the results list
+           proxies = [proxy for sublist in results for proxy in sublist]
+           
+           if not proxies:
+               logger.error(f"👻 {Fore.RED}No proxies scraped.{Style.RESET_ALL}")
+               
+           return proxies
+       ```
+   - Customize these URLs to include sources that you trust or that offer proxies specific to your needs.
+
+
 ### 💡 Expert Integration
 
 For more advanced users who want to deeply integrate **ProxyModule** into their projects:
