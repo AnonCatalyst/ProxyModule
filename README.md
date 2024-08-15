@@ -99,5 +99,5 @@ proxymodule/
 └── README.md               # Project documentation
 ```
 
-# ?? RUN ALONE
+> ?? RUN ALONE
 ``python3 main.py``
