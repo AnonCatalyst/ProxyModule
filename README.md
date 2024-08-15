@@ -1,6 +1,6 @@
 # 🌐 ProxyModule
 
-**ProxyModule** is a powerful and easy-to-use tool for scraping and validating free proxies from the web. Whether you're a beginner just getting started or an expert looking to integrate proxy functionality into your projects, ProxyModule has you covered! 🎉
+**ProxyModule** is a versatile tool designed for scraping and validating free proxies from the internet. With its asynchronous capabilities, it provides a fast and efficient way to gather and verify proxies, whether you're just starting out or working on a complex project. 🎉
 
 ## 🚀 Features
 - **Asynchronous Scraping**: Quickly scrape proxies from multiple sources.
