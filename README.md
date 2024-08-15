@@ -98,3 +98,6 @@ proxymodule/
 ├── LICENSE                 # Mit License
 └── README.md               # Project documentation
 ```
+
+# ?? RUN ALONE
+``python3 main.py``
